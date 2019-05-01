@@ -10,7 +10,6 @@ const layout = (props) => {
     
             </div>
             <main className="Content">
-            <h1>Hi People</h1>
                 {props.children}
             </main>
         </React.Fragment>
