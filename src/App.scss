@@ -1,5 +1,8 @@
+@import '~bootstrap/scss/bootstrap.scss';
 .App {
+  $body-bg: #000;
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
