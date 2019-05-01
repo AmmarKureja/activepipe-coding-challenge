@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import ImageHolder from '../../components/ImageHolder/ImageHolder';
+
 import ErrorComponent from '../../components/ErrorComponent/ErrorComponent';
-import LoadingComponent from '../../components/LoadingComponent/LoadingComponent'
+import LoadingComponent from '../../components/LoadingComponent/LoadingComponent';
+import PropertyCollection from '../../components/PropertyCollection/PropertyCollection';
 import axios from 'axios';
 
 let config = {
@@ -31,14 +32,14 @@ class MainPage extends Component {
             .catch((error) => {
                 // handle error
                 console.log('I am In Error Block', error);
-                this.setState({ error: error, loading: false })
+                this.setState({ error: null, loading: false })
             });
     }
     render() {
         let renderLoading = this.state.loading ? <LoadingComponent /> : null;
         let currentComponent = this.state.error ?
             <ErrorComponent refreshHandler={refreshHandler} />
-            : <ImageHolder />;
+            : <PropertyCollection />;
         return (
             <React.Fragment>
                 {/* <div className="container d-flex h-100"> */}
