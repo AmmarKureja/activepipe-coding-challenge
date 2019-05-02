@@ -18,7 +18,7 @@ const refreshHandler = () => {
 
 
 
-class MainPage extends Component {
+export class MainPage extends Component {
 
     state = {
         data: [...properties],
